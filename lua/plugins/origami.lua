@@ -1,40 +1,38 @@
 return {
-  {
-    "chrisgrieser/nvim-origami", -- Collection of quality-of-life features related to folding
-    event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
+  "chrisgrieser/nvim-origami", -- Collection of quality-of-life features related to folding
+  event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
 
-    opts = {
-      useLspFoldsWithTreesitterFallback = true,
-      pauseFoldsOnSearch = true,
+  opts = {
+    useLspFoldsWithTreesitterFallback = true,
+    pauseFoldsOnSearch = true,
 
-      foldtext = {
-        enabled = true,
-        padding = 1,
+    foldtext = {
+      enabled = true,
+      padding = 1,
 
-        lineCount = {
-          template = "...",
-          hlgroup = "Comment",
-        },
-
-        diagnosticsCount = false,
-        gitsignsCount = false,
+      lineCount = {
+        template = "...",
+        hlgroup = "Comment",
       },
 
-      autoFold = {
-        enabled = true,
-        kinds = { "comment", "imports" },
-      },
-
-      foldKeymaps = {
-        setup = true,
-        hOnlyOpensOnFirstColumn = false,
-      },
+      diagnosticsCount = false,
+      gitsignsCount = false,
     },
 
-    -- Disable vim auto-folding
-    init = function()
-      vim.opt.foldlevel = 99
-      vim.opt.foldlevelstart = 99
-    end,
+    autoFold = {
+      enabled = true,
+      kinds = { "comment", "imports" },
+    },
+
+    foldKeymaps = {
+      setup = true,
+      hOnlyOpensOnFirstColumn = false,
+    },
   },
+
+  -- Disable vim auto-folding
+  init = function()
+    vim.opt.foldlevel = 99
+    vim.opt.foldlevelstart = 99
+  end,
 }

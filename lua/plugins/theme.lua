@@ -47,6 +47,7 @@ return {
         blink_cmp = true,
         bufferline = true,
         gitsigns = true,
+        markview = true,
         mason = true,
 
         native_lsp = {

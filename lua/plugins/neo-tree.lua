@@ -1,5 +1,6 @@
 return {
   "nvim-neo-tree/neo-tree.nvim", -- Manage the file system and other tree like structures
+  commit = "0c29e3795b9105d68390d2fdfd430409ef8c5d65", -- Latest releases had breaking changes, Vim:E95: Buffer with this name already exists
   event = "VimEnter", -- Load this plugin when entering Neovim
   dependencies = {
     "nvim-lua/plenary.nvim",

@@ -1,5 +1,6 @@
 return {
   "folke/snacks.nvim", -- Collection of QoL plugins
+  commit = "454ba02d69347c0735044f159b95d2495fc79a73", -- Latest update had text visual bug(?) for me when opening and closing neo-tree
   event = "VimEnter", -- Load this plugin when entering Neovim
 
   opts = {
